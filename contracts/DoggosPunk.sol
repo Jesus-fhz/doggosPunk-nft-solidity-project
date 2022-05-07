@@ -33,7 +33,7 @@ contract DoggosPunk is ERC721, Ownable {
     //Constructor Function run at the beginning of the contract creation: everytime you deploy
     constructor() payable ERC721("DoggosPunk", "DP"){
         //Initializing variables. Doing it here isntead at the top makes it slightly cheaper.
-        mintPrice = 0.02 ether;
+        mintPrice = 0.001 ether;
         totalSupply = 0;
         maxSupply = 1000;
         maxPerWallet = 3;
