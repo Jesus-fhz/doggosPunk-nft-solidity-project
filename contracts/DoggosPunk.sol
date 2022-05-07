@@ -7,7 +7,7 @@ pragma solidity ^0.8.4;
 import '@openzeppelin/contracts/token/ERC721/ERC721.sol';
 
 //Contract functions where only the owner can use
-import '@openzeppelin/contracts/access/ownable.sol';
+import '@openzeppelin/contracts/access/Ownable.sol';
 
 //Our contract will inherit from ERC721 and Ownable.
 contract DoggosPunk is ERC721, Ownable {
