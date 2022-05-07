@@ -10,7 +10,7 @@ import '@openzeppelin/contracts/token/ERC721/ERC721.sol';
 import '@openzeppelin/contracts/access/ownable.sol';
 
 //Our contract will inherit from ERC721 and Ownable.
-contract MintNft is ERC721, Ownable {
+contract DoggosPunk is ERC721, Ownable {
     //Storage variables //uint256 => 256 bits which converts to 32 Bytes.
     //Price Minting
     uint256 public mintPrice;
@@ -31,7 +31,7 @@ contract MintNft is ERC721, Ownable {
 
 
     //Constructor Function run at the beginning of the contract creation: everytime you deploy
-    constructor() payable ERC721("DogPunks", "DP"){
+    constructor() payable ERC721("DoggosPunk", "DP"){
         //Initializing variables. Doing it here isntead at the top makes it slightly cheaper.
         mintPrice = 0.02 ether;
         totalSupply = 0;
