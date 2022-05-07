@@ -66,6 +66,17 @@ contract MintNft is ERC721, Ownable {
     }
 
     function mint(uint256  quantity_) public payable {
-        
+        require(isPublicMintEnable, 'Minting not enable');
+        require(msg.value == quantity_ * mintPrice, 'Wrong mint value');
+        require(totalSupply + quantity_ <= maxSupply, 'Sold out');
+        require(walletMints[msg.sender]+quantity_ <= maxPerWallet, 'Only 3 nfts per wallet');
+
+        //If all of the above check, we mint the nft
+        for(uint256 i = 0; i < quantity_; i++){
+            uint256 newTokenId = totalSupply + 1;
+            totalSupply++;
+            //SafeMint is inherit from the ERC721 contract
+            _safeMint(msg.sender, newTokenId);
+        }
     }
 }
