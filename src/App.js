@@ -5,13 +5,18 @@ import NavBar from "./components/NavBar";
 import "./App.css";
 
 function App() {
-    const [accounts, setAccouts] = useState([]);
+    const [accounts, setAccounts] = useState([]);
 
     return (
-        <div className='App'>
-            <NavBar accounts={accounts} setAccouts={setAccouts} />
-            <Mint accounts={accounts} setAccouts={setAccouts} />
-        </div>
+        <>
+            <div className='overlay'>
+                <div className='App'>
+                    <NavBar accounts={accounts} setAccounts={setAccounts} />
+                    <Mint accounts={accounts} setAccounts={setAccounts} />
+                </div>
+            </div>
+            <div className='background'></div>
+        </>
     );
 }
 

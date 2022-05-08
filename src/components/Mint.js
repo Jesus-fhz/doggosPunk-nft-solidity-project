@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { ethers, BigNumber } from "ethers";
+import { Box, Button, Flex, Input, Text } from "@chakra-ui/react";
 import doggosPunk from "../DoggosPunkAbi/abi.json";
 
 const contractAddress = "0x5b18a14318fb834c619059a7743f2c64fc80b0f5";
@@ -36,22 +37,28 @@ const Mint = ({ accounts, setAccounts }) => {
     };
 
     return (
-        <div>
-            <h1>Doggos Punks</h1>
-            <p>Mint DoggosPunk :) </p>
-            {isConnected ? (
+        <Flex justify='center' align='center' height='calc(100vh - 250px)' paddingBottom='50px'>
+            <Box width='100%' maxWidth='550px'>
                 <div>
-                    <div>
-                        <button onClick={decreaseMintAmount}>-</button>
-                        <input type='text' value={mintAmount} />
-                        <button onClick={increaseMintAmount}>+</button>
-                    </div>
-                    <button onClick={mintDoggoPunk}>Mint a DoggoPunk</button>
+                    <Text fontSize='45px' textShadow='0 5px #000'>
+                        Doggos Punks{" "}
+                    </Text>
+                    <p>Mint DoggosPunk :) </p>
+                    {isConnected ? (
+                        <div>
+                            <div>
+                                <button onClick={decreaseMintAmount}>-</button>
+                                <input type='text' value={mintAmount} />
+                                <button onClick={increaseMintAmount}>+</button>
+                            </div>
+                            <button onClick={mintDoggoPunk}>Mint a DoggoPunk</button>
+                        </div>
+                    ) : (
+                        <p>Connect your wallet to mint!</p>
+                    )}
                 </div>
-            ) : (
-                <p>Connect your wallet to min!</p>
-            )}
-        </div>
+            </Box>
+        </Flex>
     );
 };
 
