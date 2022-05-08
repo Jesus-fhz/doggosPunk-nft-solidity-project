@@ -4,7 +4,6 @@ import doggoPunk from "../assets/doggoPunk.gif";
 
 const NavBar = ({ accounts, setAccounts }) => {
     const isConnected = Boolean(accounts[0]);
-    console.log(window.screen);
     async function connectAccount() {
         if (window.ethereum) {
             //Access all accounts from MM Wallet

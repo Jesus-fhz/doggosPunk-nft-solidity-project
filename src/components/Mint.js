@@ -3,7 +3,7 @@ import { ethers, BigNumber } from "ethers";
 import { Box, Button, Flex, Input, Text } from "@chakra-ui/react";
 import doggosPunk from "../DoggosPunkAbi/abi.json";
 
-const contractAddress = process.env.REAC_APP_CONTRACT_ADDRESS;
+const contractAddress = process.env.REACT_APP_CONTRACT_ADDRESS;
 const Mint = ({ accounts, setAccounts }) => {
     const [mintAmount, setMintAmount] = useState(1);
     const isConnected = Boolean(accounts[0]);
@@ -19,7 +19,9 @@ const Mint = ({ accounts, setAccounts }) => {
             const contract = new ethers.Contract(contractAddress, doggosPunk.abi, signer);
             try {
                 //Await contract
-                const response = await contract.mint(BigNumber.from(mintAmount));
+                const response = await contract.mint(BigNumber.from(mintAmount), {
+                    value: ethers.utils.parseEther((0.001 * mintAmount).toString()),
+                });
                 console.log(response);
             } catch (error) {
                 console.log(error);
@@ -70,7 +72,7 @@ const Mint = ({ accounts, setAccounts }) => {
                                 </Button>
                                 <Input
                                     value={mintAmount}
-                                    readonly
+                                    readOnly
                                     fontFamily='inherit'
                                     padding='15px'
                                     outline='none'
