@@ -1,23 +1,18 @@
-import './App.css';
+import { useState } from "react";
+import Mint from "./components/Mint";
+import NavBar from "./components/NavBar";
+
+import "./App.css";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const [accounts, setAccouts] = useState([]);
+
+    return (
+        <div className='App'>
+            <NavBar accounts={accounts} setAccouts={setAccouts} />
+            <Mint accounts={accounts} setAccouts={setAccouts} />
+        </div>
+    );
 }
 
 export default App;
