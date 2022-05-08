@@ -29,11 +29,15 @@ const NavBar = ({ accounts, setAccounts }) => {
                 <Flex justify='space-around' align='center' width='20%' padding='30px'>
                     <Box margin='0 15px'>
                         <Text fontSize='25px' textShadow='0 5px #000'>
-                            Mint
+                            Wallet
                         </Text>
                     </Box>
                     {isConnected ? (
-                        <Box margin='0 15px'>Connected</Box>
+                        <Box margin='0 15px'>
+                            <Text fontSize='25px' textShadow='0 5px #000'>
+                                Connected
+                            </Text>
+                        </Box>
                     ) : (
                         <Button
                             onClick={connectAccount}

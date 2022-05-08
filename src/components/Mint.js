@@ -3,7 +3,7 @@ import { ethers, BigNumber } from "ethers";
 import { Box, Button, Flex, Input, Text } from "@chakra-ui/react";
 import doggosPunk from "../DoggosPunkAbi/abi.json";
 
-const contractAddress = "0x5b18a14318fb834c619059a7743f2c64fc80b0f5";
+const contractAddress = process.env.REAC_APP_CONTRACT_ADDRESS;
 const Mint = ({ accounts, setAccounts }) => {
     const [mintAmount, setMintAmount] = useState(1);
     const isConnected = Boolean(accounts[0]);
@@ -38,23 +38,78 @@ const Mint = ({ accounts, setAccounts }) => {
 
     return (
         <Flex justify='center' align='center' height='calc(100vh - 250px)' paddingBottom='50px'>
-            <Box width='100%' maxWidth='550px'>
+            <Box width='100%' maxWidth='650px'>
                 <div>
                     <Text fontSize='45px' textShadow='0 5px #000'>
                         Doggos Punks{" "}
                     </Text>
-                    <p>Mint DoggosPunk :) </p>
+                    <Text
+                        fontSize='30px'
+                        letterSpacing='-1px'
+                        textShadow='0 2px 2px #000'
+                        fontFamily='VT323'>
+                        A simple website to mint a NFT in the Ethereum rinkeby test network. I used
+                        Ethers.js to interact with Ethereum Blockchain and Solidity to build the
+                        smart-contract.
+                    </Text>
                     {isConnected ? (
                         <div>
                             <div>
-                                <button onClick={decreaseMintAmount}>-</button>
-                                <input type='text' value={mintAmount} />
-                                <button onClick={increaseMintAmount}>+</button>
+                                <Button
+                                    onClick={decreaseMintAmount}
+                                    backgroundColor='rgba(213, 36, 94, 0.56)'
+                                    borderRadius='5px'
+                                    boxShadow='0px 2px 2px 1px #0F0F0f'
+                                    color='#FFFFFF'
+                                    fontFamily='inherit'
+                                    cursor='pointer'
+                                    margin='0 15px'
+                                    padding='15px'
+                                    textShadow='0 3px #000'>
+                                    -
+                                </Button>
+                                <Input
+                                    value={mintAmount}
+                                    readonly
+                                    fontFamily='inherit'
+                                    padding='15px'
+                                    outline='none'
+                                    borderRadius='5px'
+                                    textAlign='center'
+                                    width='200px'
+                                />
+                                <Button
+                                    onClick={increaseMintAmount}
+                                    backgroundColor='rgba(213, 36, 94, 0.56)'
+                                    borderRadius='5px'
+                                    boxShadow='0px 2px 2px 1px #0F0F0f'
+                                    color='#FFFFFF'
+                                    fontFamily='inherit'
+                                    cursor='pointer'
+                                    margin='0 15px'
+                                    padding='15px'
+                                    textShadow='0 3px #000'>
+                                    +
+                                </Button>
                             </div>
-                            <button onClick={mintDoggoPunk}>Mint a DoggoPunk</button>
+                            <Button
+                                onClick={mintDoggoPunk}
+                                backgroundColor='rgba(102, 6, 51, 1);'
+                                borderRadius='5px'
+                                boxShadow='0px 2px 2px 1px #0F0F0f'
+                                color='#FFFFFF'
+                                fontFamily='inherit'
+                                cursor='pointer'
+                                margin='15px 15px'
+                                padding='15px'
+                                textShadow='0 3px #000'>
+                                Mint a DoggoPunk
+                            </Button>
                         </div>
                     ) : (
-                        <p>Connect your wallet to mint!</p>
+                        <Text fontSize='45px' textShadow='0 2px 2px #000' fontFamily='VT323'>
+                            Connect your wallet to mint!
+                        </Text>
                     )}
                 </div>
             </Box>
