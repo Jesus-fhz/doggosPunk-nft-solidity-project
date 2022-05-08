@@ -8,7 +8,7 @@ const Mint = ({ accounts, setAccounts }) => {
     const isConnected = Boolean(accounts[0]);
 
     //Handling mint
-    async function handleMint() {
+    async function mintDoggoPunk() {
         if (window.ethereum) {
             //Connecting to the BC
             //Initial Set up
@@ -39,6 +39,18 @@ const Mint = ({ accounts, setAccounts }) => {
         <div>
             <h1>Doggos Punks</h1>
             <p>Mint DoggosPunk :) </p>
+            {isConnected ? (
+                <div>
+                    <div>
+                        <button onClick={decreaseMintAmount}>-</button>
+                        <input type='text' value={mintAmount} />
+                        <button onClick={increaseMintAmount}>+</button>
+                    </div>
+                    <button onClick={mintDoggoPunk}>Mint a DoggoPunk</button>
+                </div>
+            ) : (
+                <p>Connect your wallet to min!</p>
+            )}
         </div>
     );
 };
