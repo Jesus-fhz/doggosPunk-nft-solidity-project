@@ -1,15 +1,27 @@
-# Basic Sample Hardhat Project
+# DoggosPunk Nft Minting
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, a sample script that deploys that contract, and an example of a task implementation, which simply lists the available accounts.
+_Important note: Make sure to have Metamask installed and Rinkeby as network for testing porpuses. Do NOT USE YOUR MAIN METAMASK ACCOUNT, any eth that you use for testing the app will be lost. USE RINKEBY TEST NETWORT. You can use any rinkeby faucet to get eth_
 
-Try running some of the following tasks:
+> Live demo [_here_](https://funny-khapse-2b44ce.netlify.app/).
 
-```shell
-npx hardhat accounts
-npx hardhat compile
-npx hardhat clean
-npx hardhat test
-npx hardhat node
-node scripts/sample-script.js
-npx hardhat help
-```
+## About
+
+-   A simple website to mint a NFT in the Ethereum rinkeby test network. I used Ethers.js to interact with Ethereum Blockchain and Solidity to build the smart-contract.
+
+## Technologies Used
+
+-   React.js
+-   Ethers.js
+-   Openzeppelin
+-   Hardhat
+-   Soidity
+
+## General Information
+
+-   Contract Address (ETH): 0x5b18a14318fb834c619059a7743f2c64fc80b0f5
+-   Verified Contract: [_Etherscan_](https://rinkeby.etherscan.io/address/0x5b18a14318fb834c619059a7743f2c64fc80b0f5#code)
+
+## Screenshots
+
+![](src/assets/connect.png)
+![](src/assets/connected.png)
