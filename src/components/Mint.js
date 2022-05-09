@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { ethers, BigNumber } from "ethers";
-import { Box, Button, Flex, Input, Text } from "@chakra-ui/react";
+import { Box, Button, Flex, Input, Text, Link } from "@chakra-ui/react";
 import doggosPunk from "../DoggosPunkAbi/abi.json";
 
 const contractAddress = process.env.REACT_APP_CONTRACT_ADDRESS;
@@ -40,7 +40,7 @@ const Mint = ({ accounts, setAccounts }) => {
 
     return (
         <Flex justify='center' align='center' height='calc(100vh - 250px)' paddingBottom='50px'>
-            <Box width='100%' maxWidth='650px'>
+            <Box width='100%' maxWidth='750px'>
                 <div>
                     <Text fontSize='45px' textShadow='0 5px #000'>
                         Doggos Punks{" "}
@@ -53,6 +53,20 @@ const Mint = ({ accounts, setAccounts }) => {
                         A simple website to mint a NFT in the Ethereum rinkeby test network. I used
                         Ethers.js to interact with Ethereum Blockchain and Solidity to build the
                         smart-contract.
+                    </Text>
+                    <Text
+                        fontSize='35px'
+                        letterSpacing='1px'
+                        textShadow='0 2px 2px #000'
+                        fontFamily='VT323'
+                        fontStyle='italic'>
+                        Check repository for more instructions:&nbsp;
+                        <Link
+                            href='https://github.com/Jesus-fhz/doggosPunk-nft-solidity-project'
+                            target='_blank'
+                            color='rgba(213, 36, 94, 1)'>
+                            Here
+                        </Link>
                     </Text>
                     {isConnected ? (
                         <div>
