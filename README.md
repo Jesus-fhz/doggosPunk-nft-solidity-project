@@ -1,3 +1,12 @@
+<p align="center">DoggosPunk</p>
+<p align="center">
+<img src="https://img.shields.io/badge/version-1.0-success" />
+<img src="https://img.shields.io/github/issues/Jesus-fhz/doggosPunk-nft-solidity-project" />
+<img src="https://img.shields.io/github/languages/count/Jesus-fhz/doggosPunk-nft-solidity-project"/>
+<img src="https://img.shields.io/github/languages/top/Jesus-fhz/doggosPunk-nft-solidity-project"/>
+<img src="https://img.shields.io/github/commit-activity/m/Jesus-fhz/doggosPunk-nft-solidity-project"/>
+</p>
+
 # DoggosPunk Nft Minting
 
 _Important note: Make sure to have Metamask installed and Rinkeby as network for testing porpuses. Do NOT USE YOUR MAIN METAMASK ACCOUNT, any eth that you use for testing the app will be lost. USE RINKEBY TEST NETWORT. You can use any rinkeby faucet to get eth_
