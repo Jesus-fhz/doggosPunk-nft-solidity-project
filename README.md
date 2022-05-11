@@ -1,4 +1,4 @@
-<p align="center">DoggosPunk</p>
+<h1 align="center">DoggosPunk</h1>
 <p align="center">
 <img src="https://img.shields.io/badge/version-1.0-success" />
 <img src="https://img.shields.io/github/issues/Jesus-fhz/doggosPunk-nft-solidity-project" />
