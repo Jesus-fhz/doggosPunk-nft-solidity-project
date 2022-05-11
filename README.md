@@ -8,7 +8,7 @@
 </p>
 <p align="center">
   <a href="#about">About</a> •
-  <a href="#general-information">General Information</a>• 
+  <a href="#general-information">General Information</a> • 
   <a href="#technologies">Technologies</a> •
   <a href="#screenshots">Screenshots</a> 
 </p>
