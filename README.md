@@ -8,7 +8,7 @@
 </p>
 <p align="center">
   <a href="#about">About</a> •
-  <a href="#general%information">General Information</a> •
+  <a href="#general-information">General Information</a> 
   <a href="#technologies">Technologies</a> •
   <a href="#screenshots">Screenshots</a> •
 </p>
@@ -31,7 +31,7 @@ _Important note: Make sure to have Metamask installed and Rinkeby as network for
 -   Hardhat
 -   Soidity
 
-## General Information
+## General-Information
 
 -   Contract Address (ETH): 0x5b18a14318fb834c619059a7743f2c64fc80b0f5
 -   Verified Contract: [_Etherscan_](https://rinkeby.etherscan.io/address/0x5b18a14318fb834c619059a7743f2c64fc80b0f5#code)
