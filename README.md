@@ -6,6 +6,12 @@
 <img src="https://img.shields.io/github/languages/top/Jesus-fhz/doggosPunk-nft-solidity-project"/>
 <img src="https://img.shields.io/github/commit-activity/m/Jesus-fhz/doggosPunk-nft-solidity-project"/>
 </p>
+<p align="center">
+  <a href="#about">About</a> •
+  <a href="#general%information">General Information</a> •
+  <a href="#technologies">Technologies</a> •
+  <a href="#screenshots">Screenshots</a> •
+</p>
 
 # DoggosPunk Nft Minting
 
@@ -17,7 +23,7 @@ _Important note: Make sure to have Metamask installed and Rinkeby as network for
 
 -   A simple website to mint a NFT in the Ethereum rinkeby test network. I used Ethers.js to interact with Ethereum Blockchain and Solidity to build the smart-contract.
 
-## Technologies Used
+## Technologies
 
 -   React.js
 -   Ethers.js
